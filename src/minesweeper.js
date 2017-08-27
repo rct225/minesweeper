@@ -1,3 +1,7 @@
+const printBoard = board => {
+    console.log(board.map(row => row.join(' | ')).join('\n'));
+};
+
 const generatePlayerBoard = (numberOfRows, numberOfColumns) => {
   let board = [];
   for (let rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
@@ -31,4 +35,5 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
 };
 
 
-console.log(generatePlayerBoard(2,3));
+let playerBoard = generatePlayerBoard(3,4);
+printBoard(playerBoard);
