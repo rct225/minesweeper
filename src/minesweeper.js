@@ -36,4 +36,9 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
 
 
 let playerBoard = generatePlayerBoard(3,4);
+console.log('Player Board: ');
 printBoard(playerBoard);
+
+let bombBoard = generateBombBoard(3,4,5);
+console.log('Bomb Board: ');
+printBoard(bombBoard);
