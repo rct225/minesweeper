@@ -39,12 +39,18 @@ class Board {
       return numberOfBombs
     });
   }
+
+  hasSafeTiles() {
+    return this._numberOfTiles !== this._numberOfBombs;
+  }
+
+  print() {
+      console.log(this._playerBoard.map(row => row.join(' | ')).join('\n'));
+  };
+
 }
 
 
-const printBoard = board => {
-    console.log(board.map(row => row.join(' | ')).join('\n'));
-};
 
 const generatePlayerBoard = (numberOfRows, numberOfColumns) => {
   let board = [];
