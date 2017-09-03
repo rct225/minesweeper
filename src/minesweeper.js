@@ -1,3 +1,19 @@
+class Board {
+  contstructor(numberOfRows, numberOfColumns, numberOfBombs) {
+    this._numberOfBombs = numberOfBombs;
+    this._numberOfTiles = numberOfRows * numberOfColumns;
+    this._playerBoard = Board.generatePlayerBoard(numberOfRows, numberOfColumns);
+    this._bombBoard = Board.generateBombBoard(numberOfRows, numberOfColumns, numberOfBombs);
+  }
+
+  get playerBoard (){
+    return this._playerBoard;
+  }
+
+  
+}
+
+
 const printBoard = board => {
     console.log(board.map(row => row.join(' | ')).join('\n'));
 };
